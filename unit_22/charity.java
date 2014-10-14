@@ -4,7 +4,7 @@ class charity
 
 	
 
-	static void donor (double dollarsGiven)
+	public static void donor (double dollarsGiven)
 
 	{
 	
