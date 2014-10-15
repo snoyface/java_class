@@ -1,0 +1,47 @@
+Jonathan MacLeod
+Unit Two Problem Set
+
+1:  (a) This would not work as a Java variable due to the "@" symbol. This in an invalid character for naming, and is used in other places.
+	(b)  The "-" symbol is used in other places in Java, hence cannot be used as naming a variable.
+	(c)  Using "for" cannot be used since it is also used for creating loops, hence cannot be used for naming. 
+
+2:  In the main program, we start off by stating int = 2, which starts x as 2 before anything else. The next line, 
+	we ask to run the function "foo" with the parameters x, 4. Then we go into the function "foo", which takes the parameters we have for this line (x, which still is 2 from the main program, and 3). Taking these, we return "foo", which takes these parameters, assigns them as "a" and "b" and adds them. After we add them, we return the end result. So for this line, we would have "Foo = 5". 
+	Continuing on to the second line, which is very much like the first, we would find outselves in the same position, and since we are using the funcion "foo" again, we just plug in the numbers from the parameters for this version. Between the first and second lines, the function foo and the numbers we used before are destroyed. So this one would state "Foo = 6".
+	The Third line uses a new function, "bar". Bar states we take the int "x" from the main program, and add 2 to it, then return the muliplication of X * X. In this case, they are stating the parameters are "(-x)", so we are inputting "-2" into Bar. This would give us 4, hence the answer to line 4 would be "Bar = 4".
+	The fourth line uses both "bar" and "foo". "foo" would get the parameters of int x, so (2+2, 2+1), or 4 and 3. Using "foo", this would return 7. "bar" would then take the result as its parameter, so 7 would be input into "bar". Bar would then add 2 to this, so 9, and then multiple it by itself, so 9 * 9, which comes out to 81. Hence the answer to this line is "Bar = 81". 
+
+3:  What should replace ??? in System.out.print ( ??? ); 
+	is System.out.print (  outer * inner + " " );
+
+4:  (A) 
+	(B)
+	(C)
+	(D)
+
+5:  
+
+static int donor (double dollarsGiven)
+
+{
+	
+	if (dollarsGiven >= 1000) System.out.println ("Benefactors");
+	else if (dollarsGiven >= 499.99) System.out.println ("Patrons");
+	else if (dollarsGiven >= 100.00) System.out.println ("Supporters")
+	else if (dollarsGiven >= 15) System.out.println ("Friends");
+	else if (dollarsGiven >= 15) System.out.println ("Cheapskates");
+		 	
+		
+}
+
+public static void main (String [] args)
+{
+	Scanner keyboard = new Scanner (System.in);
+
+		System.out.print("Enter the amount of contribution: ");
+			double x = Keyboard.nextDouble();
+	System.out.println();
+	donor(x);
+
+
+}
