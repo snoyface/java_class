@@ -14,34 +14,7 @@ Unit Two Problem Set
 3:  What should replace ??? in System.out.print ( ??? ); 
 	is System.out.print (  outer * inner + " " );
 
-4:  (A) 
-	(B)
-	(C)
-	(D)
-
-5:  
-
-static int donor (double dollarsGiven)
-
-{
-	
-	if (dollarsGiven >= 1000) System.out.println ("Benefactors");
-	else if (dollarsGiven >= 499.99) System.out.println ("Patrons");
-	else if (dollarsGiven >= 100.00) System.out.println ("Supporters")
-	else if (dollarsGiven >= 15) System.out.println ("Friends");
-	else if (dollarsGiven >= 15) System.out.println ("Cheapskates");
-		 	
-		
-}
-
-public static void main (String [] args)
-{
-	Scanner keyboard = new Scanner (System.in);
-
-		System.out.print("Enter the amount of contribution: ");
-			double x = Keyboard.nextDouble();
-	System.out.println();
-	donor(x);
-
-
-}
+4:  (A) 3
+	(B) 9.5
+	(C) 2.0
+	(D) -37.5
