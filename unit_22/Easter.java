@@ -34,6 +34,68 @@ class Easter{
 		int n = (h - m + r + 90) / 25;
 		int p = (h - m + r + n + 19) % 32;
 
-		return " " + n + "/" + p + ", " + year; 	
+		String month = GetMonth(n);
+		String day = GetDay(p);
+
+		return " " + month + " " + day + ", " + year; 	
+
+		
+	}
+
+	static String GetMonth (int i){
+		if (i == 1){
+			return "January"; 
+		} 
+		else if (i == 2){
+			return "February";
+		}
+		else if (i == 3){
+			return "March";
+		}
+		else if (i == 4){
+			return "April";
+		}
+		else if (i == 5){
+			return "May";
+		}
+		else if (i == 6){
+			return "June";
+		}
+		else if (i == 7){
+			return "July";
+		}
+		else if (i == 8){
+			return "August";
+		}
+		else if (i == 9){
+			return "September";
+		}
+		else if (i == 10){
+			return "October";
+		}
+		else if (i == 11){
+			return "November";
+		}
+		else if (i == 12){
+			return "December";
+		}
+		else {
+			throw new IllegalArgumentException("Not a valid Month");
+		}
+	}
+
+	static String GetDay(int i){
+		if (i == 1|| i == 21|| i == 31){
+			return i + "st";
+		}
+		else if (i == 2|| i == 22){
+			return i + "nd";
+		}
+		else if (i == 3|| i == 23){
+			return i + "rd";
+		}
+		else {
+			return i + "th";
+		}
 	}
 }
