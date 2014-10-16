@@ -12,8 +12,8 @@ class charity
 			else if (dollarsGiven >= 500) System.out.println ("Patrons");
 				else if (dollarsGiven >= 100) System.out.println ("Supporters");
 					else if (dollarsGiven >= 15) System.out.println ("Friends");
-						else if (dollarsGiven <= 14.99) System.out.println ("Cheapskates");
-							else (dollarsGiven <= 0) System.out.println ("This is not a real amount");
+						else if (dollarsGiven > 0) System.out.println ("Cheapskates");
+							else System.out.println ("This is not a real amount");
 								
 	}
 
