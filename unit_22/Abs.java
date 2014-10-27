@@ -1,3 +1,9 @@
+/*
+Prints out the largest int
+@Author Jonathan MacLeod
+@version 10/27/2014
+*/
+
 import java.util.Scanner;
 
 class Abs{
@@ -11,9 +17,7 @@ class Abs{
 			int num2 = keyboard.nextInt();
 		
 
-		largerAbsValue(num1, num2);
-		int largestNum = int Abs.largerAbsValue();
-
+		int largestNum = largerAbsValue(num1, num2);
 		System.out.println("the larger of the 2 numbers is: " + largestNum );
 	}
 
@@ -37,8 +41,5 @@ class Abs{
 		}else {
 			return numB;
 		}
-
-
 	}
-
 }
