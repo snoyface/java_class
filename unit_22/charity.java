@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class charity
+class Charity
 {
 
 	
