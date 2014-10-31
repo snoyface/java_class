@@ -20,11 +20,11 @@ class GPAclone
 		boolean increasing = true;		//True if GPA is increasing
 										//assume true till NOT
 
-		System.out.println(" how many days?");
+		System.out.println(" how many semesters?");
 		Scanner keyboard = new Scanner (System.in);
 		GPANUM = keyboard.nextInt();
 
-		System.out.print ("\n Type a double value that that represents");
+		System.out.print ("\n Type a double value that that represents ");
 		System.out.print ("your grade point avg \n");
 		Scanner keyboard1 = new Scanner (System.in);
 		
@@ -44,3 +44,10 @@ class GPAclone
 		else System.out.print ("GPA did NOT increase every semester\n");
 	}
 }
+
+//discoverd during this program: 
+//System.out.print stays on same line. 
+//used boolean value
+//sum was an experiment in moving values (from gpa)
+//final is NOT configurable
+//starting to use comments to document progress
