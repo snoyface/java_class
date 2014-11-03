@@ -10,17 +10,54 @@
 import java.math.*;
 
 class Craps
-{
+{                         
 	public static void main (String [] args)
 	{
-		int one =   rint(1,6);   //first die
-		int two =   rint(1,6);   //second die
-		int total;               //total of both dice added together
-		int point; 				 //the players point
-		//if()
-		System.out.print ("Computer rolls a " + one + " and a " + two);
+		
+		int total;
+		int point; 				 		//the players point
+		boolean totalWin = false; 		//TorF for point value 
+		boolean totalLose = false;		//
 
-		System.out.print (" , for a total of " + (one + two) + "\n");
+		do 
+		{
+			int one =   rint(1,6);   	   	//first die
+			int two =   rint(1,6);   		 //second die
+			total = one + two;           //total of both dice added together
+
+			System.out.print ("Computer rolls a " + one + " and a " + two );
+			System.out.print (" , for a total of " + total + "\n");
+
+			if (total > 4 || total < 10)
+			{
+				point = total;
+				System.out.println("Your Point is " + point);
+			}
+			
+			}while (total < 4 || total > 10);
+
+		do
+		{
+			int one =   rint(1,6);   	   	//first die
+			int two =   rint(1,6);   		 //second die
+			total = one + two;           //total of both dice added together
+
+			System.out.print ("Computer rolls a " + one + " and a " + two );
+			System.out.print (" , for a total of " + total + "\n");
+
+			if (total = point)
+			{
+				totalWin = true;
+			}
+			if (total == 7)
+			{
+				totalLose = true;
+			}
+				
+		}while (totalWin == false || totalLose == false);
+
+
+		System.out.println("foo");
 	}
 
 	static int rint (int a, int b)
