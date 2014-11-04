@@ -14,55 +14,62 @@ class Craps
 	public static void main (String [] args)
 	{
 		
-		int total;
-		int point; 				 		//the players point
-		boolean totalWin = false; 		//TorF for point value 
-		boolean totalLose = false;		//
+		int total = 0;
+		int point = 0; 				 		//the players point
+		boolean totalWin = false; 			//win value
+		boolean totalLose = false;			//lose value
 
+		// Come out roll
 		do 
-		{
+		{ 
 			int one =   rint(1,6);   	   	//first die
-			int two =   rint(1,6);   		 //second die
-			total = one + two;           //total of both dice added together
+			int two =   rint(1,6);   		//second die
+			total = one + two;              //total of both dice added together
 
 			System.out.print ("Computer rolls a " + one + " and a " + two );
 			System.out.print (" , for a total of " + total + "\n");
 
-			if (total > 4 || total < 10)
+			if (total >= 4 && total != 7 && total < 10)
 			{
 				point = total;
-				System.out.println("Your Point is " + point);
 			}
 			
-			}while (total < 4 || total > 10);
+		} while (point == 0);
+			System.out.println("Your Point is " + point);
 
-		do
+		// Game Rolls
+		do 
 		{
-			int one =   rint(1,6);   	   	//first die
+			int one =   rint(1,6);   	   	 //first die
 			int two =   rint(1,6);   		 //second die
-			total = one + two;           //total of both dice added together
+			total = one + two;           	 //total of both dice added together
 
 			System.out.print ("Computer rolls a " + one + " and a " + two );
 			System.out.print (" , for a total of " + total + "\n");
 
-			if (total = point)
+			if (total == point)
 			{
 				totalWin = true;
-			}
+				break;
+			} 
 			if (total == 7)
 			{
 				totalLose = true;
-			}
-				
-		}while (totalWin == false || totalLose == false);
+				System.out.println("Seven is CRAPS! Exiting.... ");
+				break;
+			} else 
+				System.out.println("not lucky yet! Rerolling.... ");				
+		} while (totalWin == false || totalLose == false);
 
+		if(totalWin == true)
+		{
+			System.out.println("You Win! Congrats!");
+		}else System.out.println("you Lose! sorry ");
 
-		System.out.println("foo");
 	}
 
 	static int rint (int a, int b)
 	{
 	return a + (int) ( (b-a+1) * Math.random() );
 	}
-
 }
