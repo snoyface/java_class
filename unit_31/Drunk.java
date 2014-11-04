@@ -10,60 +10,67 @@ import java.util.*;
 
 class Drunk
 {
-	    //num walks to be taken
 
 	public static void main (String [] args){
-		final int numWalks = 10;
-		int sumSteps = 0;
-	
-		for (int i = 0; i < numWalks; i++)
-		{
-			sumSteps += drunkWalk();
-		}
+		final int numWalks;													//how many steps int
+		int sumSteps = 0;													//total steps taken
+		int currentSteps = 0;												//steps per loop
 		
-		System.out.println(" Avg number of steps was " + sumSteps/numWalks);
+		System.out.println(" How many times should they for a walk? ");		//ask for how many walks
+		Scanner keyboard = new Scanner (System.in);
+		numWalks = keyboard.nextInt();		
+	
+		for (int i = 0; i < numWalks; i++)				
+		{
+			System.out.println("Here we go again...time for a walk!");
+			currentSteps = drunkWalk();										//return steps
+			
+			if (currentSteps < 0)											//is it home (- num)
+			{	
+				System.out.println("Landed at HOME");	
+				currentSteps = currentSteps * -1;							//make positive again
+			}else System.out.println("Landed at JAIL"); {
+				
+			}
+			System.out.println(" took " + currentSteps + " steps");			//return steps
+			sumSteps += currentSteps;
+		}
+		System.out.println ( " Avg number of steps was " + sumSteps/numWalks );	//ave steps
+
 	}
 
-	static int drunkWalk(){
-		int startPoint = 5;
-		int jail = 10;
-		int home = 0;
-		int currentLocation = startPoint;
-		int totalSteps = 0;
+	static int drunkWalk() {
+		int startPoint = 5;			//Starting point for student
+		int jail = 10;				//location of jail
+		int home = 0;				//location of home
 		
-		System.out.println("Here we go again...time for a walk!");
+		int currentLocation = startPoint;	//starts us off at the startpoint
+		int totalSteps = 0;
 
-		do{
+		do {
 
-		int rNum = rint(0,100);
+		int rNum = rint(0,100);		//randonize a num
 
-		if(rNum >= 49)
+		if( rNum >= 49 )			
 		{
-			currentLocation++;
+			currentLocation++;		//add to current location
 		} else {
-			currentLocation--;
+			currentLocation--;		//subtract to current location
 		}
 
-		totalSteps++;
+		totalSteps++;				//record the total steps used this time around
 
 		} while (currentLocation != home && currentLocation != jail);
 
-		System.out.print("Took " + totalSteps + " steps");
-		System.out.print(", and " );
-
-		if (currentLocation == jail)
+		if (currentLocation == home)
 		{
-			System.out.println("Landed at HOME");
-		}else System.out.println("Landed at JAIL");
+			totalSteps = totalSteps * -1;	//makes the return minus to show its home in main
+		}
 
-		return totalSteps;
-
-		
-		
-
+		return totalSteps;					//return the total steps
 	}
 
-	static int rint (int a, int b)
+	static int rint (int a, int b)			
 	{
 	return a + (int) ( (b-a+1) * Math.random() );
 	}
