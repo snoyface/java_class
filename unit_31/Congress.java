@@ -1,15 +1,3 @@
-return 2 boolenans for rep and house, both taking in age and num of years at a US citzen. 
-
-rep needs to be above 25, and a citzen for 7 years
-
-senate needs to be above 30 and a citzen for 9 years
-
-main will take in the age and citizen years, and pass them to rep and senate methods, and return the answer based on their input. 
-
-if senate is true and rep is true, print they can be both
-	if rep is true and sentate is false, print only rep can
-		if both are false, print you cannot be either
-
 /*
 * Deterimines if a person (based on years and time as citzen in US) can * be elected for either the Senate or as a Representative
 * @author Jonathan MacLeod
@@ -22,7 +10,7 @@ class Congress {
 
 	public static void main ( String [] args ) {
 		int age;		//age of person
-		int lengthOfCitzenship	//years at citzen
+		int lengthOfCitzenship;	//years at citzen
 		boolean rep;	//can they be a rep?
 		boolean senate;	//can they be a senator?
 
@@ -32,14 +20,26 @@ class Congress {
 
 		System.out.println("Enter years as U.S. citizenship: ");  //input yrs at citzen
 		Scanner usCitIn = new Scanner (System.in);
-		citzenYrs = usCitIn.nextInt();
+		lengthOfCitzenship = usCitIn.nextInt();
 	
-		senate = eligibleForSenate();
-		rep = eligibleForHouse();
+		senate = eligibleForSenate(age, lengthOfCitzenship);
+		rep = eligibleForHouse(age, lengthOfCitzenship);
 
-		if ( )
+		if (senate && rep) {
+			System.out.print("The candidate is eligible for election");
+			System.out.print(" to both the House of Representatives and the Senate.\n");
+		} else if (rep && senate == false) {	
+			System.out.print("The candidate is eligible for election");
+			System.out.print(" to the House of Representatives but is");
+			System.out.print(" NOT eligible for election to the Senate.\n");
+		} else if (rep == false && senate == false) {	
+			System.out.print("The candidate is eligible for election");
+			System.out.print(" to both the House ofRepresentatives ");
+			System.out.print(" and the Senate.\n");
+		} else {
+			throw new IllegalArgumentException();
+		}
 	}
-
 
 	static boolean eligibleForSenate(int age, int lengthOfCitzenship ) {
 		if (age >= 30 && lengthOfCitzenship >= 9) {
