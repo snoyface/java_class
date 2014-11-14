@@ -10,16 +10,16 @@ import java.util.*;
 class Congress {
 
 	public static void main ( String [] args ) {
-		int age;		//age of person
-		int lengthOfCitzenship;	//years at citzen
-		boolean rep;	//can they be a rep?
-		boolean senate;	//can they be a senator?
+		int age;													//age of person
+		int lengthOfCitzenship;										//years at citzen
+		boolean rep = true;											//can they be a rep?
+		boolean senate = true;										//can they be a senator?
 
-		System.out.println("Enter age of candidate: " );  //input age
+		System.out.println("Enter age of candidate: " );  			//input age
 		Scanner ageIn = new Scanner (System.in);
 		age = ageIn.nextInt();
 
-		System.out.println("Enter years as U.S. citizenship: ");  //input yrs at citzen
+		System.out.println("Enter years as U.S. citizenship: "); 	 //input yrs at citzen
 		Scanner usCitIn = new Scanner (System.in);
 		lengthOfCitzenship = usCitIn.nextInt();
 	
@@ -29,32 +29,32 @@ class Congress {
 		if (senate && rep) {
 			System.out.print("The candidate is eligible for election");
 			System.out.print(" to both the House of Representatives and the Senate.\n");
-		} else if (rep && !senate) {	
-			System.out.print("The candidate is eligible for election");
-			System.out.print(" to the House of Representatives but is");
-			System.out.print(" NOT eligible for election to the Senate.\n");
-		} else if (!rep && !senate) {	
-			System.out.print("The candidate is NOT eligible for election");
-			System.out.print(" to both the House of Representatives ");
-			System.out.print(" and the Senate.\n");
-		} else {
-			throw new IllegalArgumentException();
+			} else if (rep && !senate) {	
+				System.out.print("The candidate is eligible for election");
+				System.out.print(" to the House of Representatives but is");
+				System.out.print(" NOT eligible for election to the Senate.\n");
+				} else if (!rep && !senate) {	
+					System.out.print("The candidate is NOT eligible for election");
+					System.out.print(" to both the House of Representatives ");
+					System.out.print(" and the Senate.\n");
+					} else {
+						throw new IllegalArgumentException();
 		}
 	}
 
-	static boolean eligibleForSenate(int age, int lengthOfCitzenship ) {
+	static boolean eligibleForSenate(int age, int lengthOfCitzenship ) {	//logic for senate 
 		if (age >= 30 && lengthOfCitzenship >= 9) {
 			return true;
-		} else {
-			return false;
+			} else {
+				return false;
 		} 
 	}
 
-	static boolean eligibleForHouse (int age, int lengthOfCitzenship ) {
+	static boolean eligibleForHouse (int age, int lengthOfCitzenship ) {	//logic for rep
 		if (age >= 25 && lengthOfCitzenship >= 7) {
 			return true;
-		} else { 
-			return false;
+			} else { 
+				return false;
 		}
 	}
 

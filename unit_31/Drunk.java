@@ -23,7 +23,8 @@ class Drunk
 		for (int i = 0; i < numWalks; i++)				
 		{
 			System.out.println("Here we go again...time for a walk!");
-			currentSteps = drunkWalk();										//return steps
+			currentSteps = drunkWalk();		
+										//return steps
 			
 			if (currentSteps < 0)											//is it home (- num)
 			{	
@@ -32,43 +33,44 @@ class Drunk
 			}else System.out.println("Landed at JAIL"); {
 				
 			}
-			System.out.println(" took " + currentSteps + " steps");			//return steps
+						//return steps
 			sumSteps += currentSteps;
+			System.out.println(" took " + currentSteps + " steps");	
 		}
 		System.out.println ( " Avg number of steps was " + sumSteps/numWalks );	//ave steps
 
 	}
 
 	static int drunkWalk() {
-		int startPoint = 5;			//Starting point for student
-		int jail = 10;				//location of jail
-		int home = 0;				//location of home
+		int startPoint = 5;							//Starting point for student
+		int jail = 10;								//location of jail
+		int home = 0;								//location of home
 		
-		int currentLocation = startPoint;	//starts us off at the startpoint
+		int currentLocation = startPoint;			//starts us off at the startpoint
 		int totalSteps = 0;
 
 		do {
 
-		int rNum = rint(0,100);		//randonize a num
+			int rNum = rint(0,100);					//randonize a num
 
-		if( rNum >= 49 )			
-		{
-			currentLocation++;		//add to current location
-		} else {
-			currentLocation--;		//subtract to current location
+			if( rNum >= 49 )			
+			{
+			currentLocation++;						//add to current location
+				} else {
+				currentLocation--;					//subtract to current location
+			}
+
+			totalSteps++;							//record the total steps used this time around
+
+			} while (currentLocation != home && currentLocation != jail);
+
+				if (currentLocation == home)
+				{
+					totalSteps = totalSteps * -1;	//makes the return minus to show its home in main
+			}
+
+			return totalSteps;						//return the total steps
 		}
-
-		totalSteps++;				//record the total steps used this time around
-
-		} while (currentLocation != home && currentLocation != jail);
-
-		if (currentLocation == home)
-		{
-			totalSteps = totalSteps * -1;	//makes the return minus to show its home in main
-		}
-
-		return totalSteps;					//return the total steps
-	}
 
 	static int rint (int a, int b)			
 	{

@@ -55,21 +55,22 @@ class Craps
 			if (total == 7)
 			{
 				totalLose = true;
-				System.out.println("Seven is CRAPS! Exiting.... ");
+				System.out.println("Seven is CRAPS! ");
 				break;
-			} else 
-				System.out.println("not lucky yet! Rerolling.... ");				
+				} else 
+					System.out.println("not lucky yet! Rerolling.... ");	
+
 		} while (totalWin == false || totalLose == false);
 
 		if(totalWin == true)
 		{
 			System.out.println("You Win! Congrats!");
-		}else System.out.println("you Lose! sorry ");
+			}else System.out.println("you Lose! sorry ");
 
 	}
 
 	static int rint (int a, int b)
 	{
-	return a + (int) ( (b-a+1) * Math.random() );
+		return a + (int) ( (b-a+1) * Math.random() );
 	}
 }

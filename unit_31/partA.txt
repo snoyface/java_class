@@ -1,0 +1,42 @@
+//Unit 3.1 
+//Jonathan MacLeod
+
+1: if ( isASmoker == false && isMale == true && isGoodLooking == true && 						isAbleToRelocate == true
+		&& age >= 22 && age <= 44 && height < 72 && weight < 160)
+			System.out.print ("Marry Me!");
+		else System.out.print ("Get Lost");
+
+		//I actually wrote a program to scan in all the variables and return the answer with another method. Taxing but worth it!
+
+2: ! (!0 = (x&&y)), which can be slimmed down to x&&y == 0
+
+3: while ((i <10)  && ((j*j)+1 != 25))
+	{
+	i++;
+	++j
+	System.out.println  ( i * j );
+	}
+
+4:
+p	    q	    r	    (p && q) || (!r)	!(p&& (q || !r))
+FALSE	FALSE	FALSE	TRUE	            TRUE
+FALSE	FALSE	TRUE	FALSE	            FALSE
+FALSE	TRUE	FALSE	TRUE	            FALSE
+TRUE	FALSE	FALSE	TRUE	            FALSE
+TRUE	TRUE	FALSE	TRUE	            FALSE
+TRUE	TRUE	TRUE	TRUE	            FALSE
+FALSE	TRUE	TRUE	FALSE	            TRUE
+TRUE	FALSE	TRUE	FALSE	            FALSE
+
+5:
+
+I actually have no idea for this one. I have the structure setup for it, but I realized at the last second I had not answered this, and could not find the info. I apologize for this and will look it up. I attempted to answer it, but I am not sure if it is right.
+
+static boolean isJavaIdentifierStart (char ch){
+	if (ch == [[a-z$_]{
+		return true;
+		}else{
+			return false;
+	}
+}
+

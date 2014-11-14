@@ -15,7 +15,7 @@ class TwoRandom{
 		int diff = Math.abs (a-b);
 		System.out.println("Number one is: " + a);
 		System.out.println("Number two is: " + b);
-		System.out.println ("The differnce is " + diff );
+		System.out.println ("The difference is " + diff );
 
 		if (diff == 0){
 			System.out.println ("A Tie!");
