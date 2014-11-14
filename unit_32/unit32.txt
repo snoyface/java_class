@@ -1,0 +1,34 @@
+1:
+	a: 
+
+
+2: public static void printLetters(String text)
+	{
+		int right = text.length() - 1;
+
+		for (int i = 0; i < text.length(); i++)
+		{
+			if (i != right){
+			 	System.out.print (text.charAt (i) + "-");
+			 } else {
+			 	System.out.print(text.charAt (i));
+			 	break; 
+			 }
+		}
+		System.out.println(); // to end the line of output
+	}
+
+
+
+
+
+
+
+
+4: This method takes the String s and prints the String n times. If it is 
+	less than or equal to 0, it does not print anything. 
+
+5: public static String sentenceType (String n)
+	{
+		if (n )
+	}
