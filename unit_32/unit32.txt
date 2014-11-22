@@ -18,11 +18,15 @@
 		System.out.println(); // to end the line of output
 	}
 
+3: 
+class Pet
+{
+	public static main void (String [] args)
+	{
 
+	}
 
-
-
-
+}
 
 
 4: This method takes the String s and prints the String n times. If it is 
