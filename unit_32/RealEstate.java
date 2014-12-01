@@ -18,14 +18,15 @@ class RealEstate
 		Scanner keyboard = new Scanner (System.in);
 		System.out.println("Enter your ad sentence");
 		String adline = keyboard.nextLine();	//grabs sentence to fix
-
+	
 		String lineFixed = lineFixer(adline);	//send to lineFixer method
-		System.out.println ("\r" + lineFixed);	//print result
+
+		System.out.println ("\r" + lineFixed);
 	}
 
 	static String lineFixer(String line) //takes out vowels, returns fixed string
 	{
-		String lineOutput = "";			//will be the final vowelless output
+		String lineOutput = "";			//final returned vowelless output
 
 		for (int z = 0; z < line.length(); z++)
 		{
@@ -42,10 +43,10 @@ class RealEstate
 	static boolean notVowel (char c)  //check out the char, is it a vowel listed? 
 									  //if so, return true
 	{
-		String vowels = "aeiou";   //the vowels not to use
-     for (int i=0; i<5; i++)
+		String vowel = "aeiouAEIOU";   //the vowels not to use
+     for (int i=0; i<10; i++)
      {
-       if (c == vowels.charAt(i))
+       if (c == vowel.charAt(i))
          return true;
      }
      return false;
