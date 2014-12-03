@@ -58,7 +58,7 @@ class Rational
     public Rational mulRat (Rational multiplier)
     {
         int top = numerator * multiplier.numerator;
-	int bottom = denominator * multiplier.denominator;
+	     int bottom = denominator * multiplier.denominator;
 	return new Rational (top, bottom);
     }
 
@@ -74,4 +74,16 @@ class Rational
     {
        return numerator + " / " + denominator;
     }
+
+    public boolean lessThanRat(Rational x)
+    {
+      int topX = x.numerator * this.denominator;
+      int topA = this.numerator * x.denominator;
+      if (topX > topA)
+      {
+        return true;
+      }
+      return false;
+    }
+
  }   

@@ -1,5 +1,10 @@
 1:
-	a: 
+	a:  false
+	b:	13
+	c:  7
+	d:  7
+	e:	11
+	f:	"va, Java, "
 
 
 2: public static void printLetters(String text)
@@ -21,18 +26,37 @@
 3: 
 class Pet
 {
-	public static main void (String [] args)
-	{
+	String = name;
+	int = age;
+	double usLbs;
 
+	Pet(String n, int a, double us)
+	{
+		name = n;
+		age = a;
+		usLbs = us;
 	}
 
+	Pet(String n, int a)
+	{
+		name = n;
+		age = a;
+	}
 }
 
 
-4: This method takes the String s and prints the String n times. If it is 
-	less than or equal to 0, it does not print anything. 
+4: This method takes the String s and prints the String n times. If it is less than or equal to 0, it does not print anything. 
 
-5: public static String sentenceType (String n)
+5: public static void String sentenceType (String s)
 	{
-		if (n )
+		if (n.str.charAt(str.length() == '.'){
+			System.out.println("Declarative")
+		}else if (n.str.charAt(str.length() == '!')
+			{
+				System.out.println("Exclamatory")
+			}else if (n.str.charAt(str.length() == '?')
+				{
+					System.out.println("question mark!!?!")
+				}else System.out.println("bad ending");
+		}
 	}

@@ -14,20 +14,20 @@ class Pizza
 		System.out.println (" Pizza! ");
 	}
 
-	Pizza (int s, int sls, int cs)
-	{
-		pizzaType = "not defined";  //in case there is no pizza type
-		size = s;
-		numSlices = sls;
-		pizzaCost = cs;
-	}
-
-	Pizza (String name, int s, int sls, int cs )
+	Pizza (String name, int s, int sls, int css )
 	{
 		pizzaType = name;
 		size = s;
 		numSlices = sls;
-		pizzaCost = cs;
+		pizzaCost = css;
+	}
+
+	Pizza (int s, int sls, int css)
+	{
+		pizzaType = "not defined";  //in case there is no pizza type
+		size = s;
+		numSlices = sls;
+		pizzaCost = css;
 	}
 
 	//actions of Pizza
@@ -50,8 +50,11 @@ class Pizza
 		return costPerSlice;
 	}
 
-	double costPerSquareInch (double costPerSlice, double areaSlice)
+	double costPerSquareInch (int pizzaCost, int numSlices,int size  )
 	{
+		double costPerSlice = pizzaCost/numSlices;
+		double wholeArea = Math.PI * Math.pow ((size/2), 2);
+        double areaSlice = wholeArea/numSlices;
 		double costPerInch = costPerSlice/areaSlice;
 		return costPerInch;
 	}

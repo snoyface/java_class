@@ -21,7 +21,7 @@ class RealEstate
 	
 		String lineFixed = lineFixer(adline);	//send to lineFixer method
 
-		System.out.println ("\r" + lineFixed);
+		System.out.println (lineFixed + "\r");  
 	}
 
 	static String lineFixer(String line) //takes out vowels, returns fixed string
@@ -30,11 +30,11 @@ class RealEstate
 
 		for (int z = 0; z < line.length(); z++)
 		{
+			char letter = line.charAt(z);      //get the char at the # char we looking at
 
-			if (!notVowel(line.charAt(z)))  
+			if (z == 0 || !notVowel(letter) || line.charAt(z-1) == ' ')
 			{
-				char a = line.charAt(z);      //get the char at the # char we looking at
-				lineOutput += line.charAt(z);  //update the new string, not including vowel
+				lineOutput += letter;  //update the new string, not including vowel
 			}
 		}
 		return lineOutput;

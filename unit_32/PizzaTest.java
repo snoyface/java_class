@@ -6,6 +6,8 @@ class PizzaTest
         	int size = 10;                  	//size of pizza, diameter
         	int numSlices = 10;            //number of slices
         	int pizzaCost = 20;					//cost 
+        	double a = 0.0;							//used in costPerSquareInch
+        	double b;							
 
         	Pizza myPizza = new Pizza (pizzaType, size, numSlices, pizzaCost);
 		
@@ -15,6 +17,6 @@ class PizzaTest
 		
 			System.out.printf ("One slice costs $%.2f, which comes" +
 			" to $%.3f per square inch.\n",myPizza.costPerSlice(pizzaCost, numSlices),
-			myPizza.costPerSquareInch() );
+			myPizza.costPerSquareInch(pizzaCost, numSlices, size) );
 		}
 	}
