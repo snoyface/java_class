@@ -1,0 +1,66 @@
+Jonathan MacLeod
+Unit 4 part 1
+
+1:*  a: boolean [] test = new boolean [20];
+	
+	b: int [] family = new int [12];
+	c: int [] [] rain = new int [60] [60];
+	d: 	
+	   String [] candidate = new String[8];		
+	class Candidate{
+		String name;
+		int numVotes = 0;
+	}
+
+
+
+2: 
+class Foobar
+	{
+		public static void main (String [] args)
+		{
+			int [] r = new int [20];
+			for (int i = 0; i < r.length(); i++)
+			r[i] = Math.random * 100;
+		}
+	}
+
+3: 	a: for (int i = 0; i < sample.length(); i++)
+			sample[i] = 5;
+		
+	b:	
+		int [] reverse = new int[SIZE];
+		reverse[0] = sample.length()-1;
+		reverse.length()-1 = sample[0];
+
+	c: 	for (int i = 0; i < sample.length(); i++)
+			if (sample[i] < 0) sample[1] * -1;
+
+	d:	int [] odd = new int[];
+		for (int i = 0; i < sample.length(); i++)
+			if (sample[i] % 2 == 0) System.out.print(Arrays.toString(sample[i]) + " "); 
+		
+4:		int sum = 0;	
+   		int numrow = 0;
+   		int total = 0;
+   		int sumtotal = 0;
+		for (int row = 0; row < foobar.length; row++)
+		{
+			for (int col = 0; col < foobar[row].length; col++)
+			{
+				sum++;
+			}
+			numrow++;
+			sumtotal += sum;
+			sum = 0;
+		}
+		total = sumtotal/numrow;
+	}
+
+
+5: 	char[][] ticTacToe = 
+	{
+		{'O',' ',' '},
+		{' ','X','O'},
+		{'X','O','X'}
+	};
