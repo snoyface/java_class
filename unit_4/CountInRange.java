@@ -21,7 +21,6 @@ class CountInRange
 
 		System.out.println("the amount of ints between " + min + " and " 
 			+ max + " is " + countInRange(count, min, max));
-
 	}
 
 	public static int countInRange (int [] list, int min, int max)  
