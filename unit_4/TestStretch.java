@@ -14,8 +14,10 @@ class TestStretch{
 	{
 		int[] list = {18, 7, 4, 14, 11};
 		int[] list2 = stretch(list);
+		System.out.println("The original array");
 		System.out.println (Arrays.toString(list));
 			// the above prints [18, 7, 4, 24, 11]
+		System.out.println("The devided array");
 		System.out.println (Arrays.toString(list2));
 			// the above prints [9, 9, 4, 3, 2, 2, 7, 7, 6, 5]
 	}
