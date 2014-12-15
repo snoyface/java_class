@@ -29,6 +29,12 @@ class ArrayIntersect
 	}
 
 	static boolean intersect(int[] test, int[] test1)
+	/* This method tests to see if either array has the 
+	* same numbers, returns true if it does 
+	* @param equals: return value
+	* @param temp: test for array 1
+	* @param temp1: test for array 2
+	*/
 	{
 		boolean equals = false;
 		for(int i = 0; i < test.length; i++)
