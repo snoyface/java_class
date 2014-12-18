@@ -20,37 +20,29 @@ class Bool
 	fullOfBool(test3);
 	}
 
-	public static boolean fullOfBool(boolean [] test)
+	public static void fullOfBool(boolean [] test)
 	//Prints out first, last, and how many true 
 	//values are in a row
 	{
 		int count = 0; //counts the # of true
-		int first = 0; //to assign the first true
-		int last = 0; //assigns to the last true]
-		boolean firstT = false;
+		int first = -1; //to assign the first true
+		int last = -1; //assigns to the last true]
+		boolean firstT = false; //first True
 		boolean lastT = false;
 
 		for (int i = 0; i < test.length; i++)
 		{
-			boolean temp = test[i];    //assigned to current boolean in the array
-
-			if (count < 1 && temp)
-			{
-				count = count + 1;
-				first = i + 1;
-				firstT = true;
-			}else if (temp && count > 0)
-				{
-					count = count + 1;
-					firstT = true;
-				}else if (!temp)
-
-			if (first > 0 && !temp && firstT ) last = count - 1;		
+			if (test[i]) {
+                if (first < 0 || i < first) first = i;
+                if (first < 0 || i > last) last = i;
+            
+                count++;	
+			}
 		}
 
+		//prints out results for each test
 		System.out.println("The first True statement is # " + first + " in the array");
 		System.out.println("The last true statement is # " + last + " in the array");
 		System.out.println("The amount of True statements is " + count + ".\n");
-	return true;
 	}
 }
